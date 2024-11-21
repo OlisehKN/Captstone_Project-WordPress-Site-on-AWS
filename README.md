@@ -70,6 +70,7 @@ A small to medium-sized digital marketing agency, "DigitalBoost", wants to enhan
 ![Screenshot (143)](https://github.com/user-attachments/assets/b46d56cb-e338-44f7-9ff4-514a6396d5a2)
 
 ### <ins>2.) Public and Private Subnet with NAT Gateway</ins>
+  <ins>Objective: Implement a secure network architecture with public and private subnets. Use a NAT Gateway for private subnet internet access</ins>
 #### - <ins>Set up public subnet for resources accessible from the internet</ins>
 
   - Firstly, I created an internet gateway to connect to the public subnets to allow internet access into the subnets and then attached it to the VPC i created earlier
@@ -123,6 +124,7 @@ Set the beginning IP range to 0.0.0.0/0
 - I have now configured the public subnets with an internet gateway to allow for internet access into the subnet and configured a NAT Gateway with private connectivity to the private subnets to allow for offline and private access to the subnets.
 
 ### <ins>3.) AWS MySQL RDS Setup</ins>
+  <ins>Objective: Deploy a managed MySQL database using Amazon RDS for WordPress data storage.</ins>
 
 
 
