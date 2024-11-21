@@ -61,6 +61,47 @@ A small to medium-sized digital marketing agency, "DigitalBoost", wants to enhan
 
 <ins>Private Subnets</ins>
 
+![Screenshot (139)](https://github.com/user-attachments/assets/0c935d66-4b9c-4be2-ad9c-0ac42adafcad)
+
+![Screenshot (140)](https://github.com/user-attachments/assets/2034314e-8d2c-49db-a782-37d529fe6c0e)
+
+![Screenshot (142)](https://github.com/user-attachments/assets/d0c8f772-143a-4cd0-9f7c-8f60a4c4c353)
+
+![Screenshot (143)](https://github.com/user-attachments/assets/b46d56cb-e338-44f7-9ff4-514a6396d5a2)
+
+### <ins>Public and Private Subnet with NAT Gateway</ins>
+#### - <ins>Set up public subnet for resources accessible from the internet</ins>
+
+  - Firstly, I created an internet gateway to connect to the public subnets to allow internet access into the subnets and then attached it to the VPC i created earlier
+
+![Screenshot (116)](https://github.com/user-attachments/assets/979375fc-29d9-433d-a74b-e7753201a560)
+
+![Screenshot (117)](https://github.com/user-attachments/assets/c8ac99b3-3ae9-46af-a317-0a88391fd4f6)
+
+![Screenshot (118)](https://github.com/user-attachments/assets/69ea5237-8f13-4f9a-aea6-2b4cb29d0fd9)
+
+![Screenshot (119)](https://github.com/user-attachments/assets/4365f25b-9df0-43a9-aae1-cf4a22bb772a)
+
+  - Edit routes and add the internet gateways to the public subnets
+
+
+
+- Set the beginning IP range to 0.0.0.0/0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
