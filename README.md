@@ -69,7 +69,7 @@ A small to medium-sized digital marketing agency, "DigitalBoost", wants to enhan
 
 ![Screenshot (143)](https://github.com/user-attachments/assets/b46d56cb-e338-44f7-9ff4-514a6396d5a2)
 
-### <ins>Public and Private Subnet with NAT Gateway</ins>
+### <ins>2.) Public and Private Subnet with NAT Gateway</ins>
 #### - <ins>Set up public subnet for resources accessible from the internet</ins>
 
   - Firstly, I created an internet gateway to connect to the public subnets to allow internet access into the subnets and then attached it to the VPC i created earlier
@@ -84,9 +84,56 @@ A small to medium-sized digital marketing agency, "DigitalBoost", wants to enhan
 
   - Edit routes and add the internet gateways to the public subnets
 
+![Screenshot (145)](https://github.com/user-attachments/assets/9250a14d-b2e3-4454-80b2-c58c062f2bfa)
+
+Set the beginning IP range to 0.0.0.0/0
+
+![Screenshot (146)](https://github.com/user-attachments/assets/dc84efa9-ca6e-46dd-8528-a4fafb4d25a9)
+
+![Screenshot (147)](https://github.com/user-attachments/assets/2818f998-5b3c-4c41-ba0a-25ec85c2818e)
+
+![Screenshot (148)](https://github.com/user-attachments/assets/c2124234-67db-40fe-9dc5-80fd72d4bb59)
+
+![Screenshot (149)](https://github.com/user-attachments/assets/5eaba8fc-7f38-4c20-aba0-845bad4666e0)
+
+![Screenshot (150)](https://github.com/user-attachments/assets/4cc954c5-95e1-4bb8-b930-78091a612390)
+
+#### - <ins>Create a NAT Gateway for private subnet internet access</ins>
+
+- While creating the NAT Gateway, i link the first and second private gateways respectively and choose the private connectivity type for both gateways
+
+![Screenshot (121)](https://github.com/user-attachments/assets/83d2239b-8806-4a13-a834-6468798afab2)
+
+![Screenshot (122)](https://github.com/user-attachments/assets/d6d73df0-1321-4ec0-8364-59a2a9dd62be)
+
+![Screenshot (123)](https://github.com/user-attachments/assets/60c80d87-5feb-4ab9-856a-57c8549080ea)
+
+![Screenshot (124)](https://github.com/user-attachments/assets/4e40635c-dbbf-41c7-b208-740929dafc24)
+
+- After creating the Gateways, through the route table section, i added the NAT Gateway to the route list of both private subnets
+
+![Screenshot (155)](https://github.com/user-attachments/assets/2af6417f-b854-429d-8168-167e79efb428)
+
+![Screenshot (156)](https://github.com/user-attachments/assets/b0905d2b-ad16-486f-b498-6649315105d5)
+
+![Screenshot (159)](https://github.com/user-attachments/assets/347eab95-f542-43a7-8428-bb515466bb6a)
+
+![Screenshot (160)](https://github.com/user-attachments/assets/176e3c48-0b9d-4768-9ce6-dc25d5b4c115)
+
+- I have now configured the public subnets with an internet gateway to allow for internet access into the subnet and configured a NAT Gateway with private connectivity to the private subnets to allow for offline and private access to the subnets.
+
+### <ins>3.) AWS MySQL RDS Setup</ins>
 
 
-- Set the beginning IP range to 0.0.0.0/0
+
+
+
+
+
+
+
+
+
 
 
 
