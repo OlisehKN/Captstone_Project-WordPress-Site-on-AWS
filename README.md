@@ -157,6 +157,83 @@ I link the DigitalBoost VPC and Security group and create the Database
 
 - Connect WordPress to the RDS
 
+Before connecting Wordpress to the database, i will have to install a few tools on the EC2 Instance
+
+Installing MySQL
+  - To install MySQL i use the following command lines on GitBash to download, install and start MySQL
+
+        sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+        sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
+        sudo yum install mysql-community-server -y
+        sudo systemctl enable mysqld
+        sudo systemctl start mysqld
+
+![Screenshot (175)](https://github.com/user-attachments/assets/11f9ad76-5f67-4722-b601-0def4852f70d)
+![Screenshot (176)](https://github.com/user-attachments/assets/b33b2303-2ae3-41d1-83b6-8d00e1fad4be)
+![Screenshot (177)](https://github.com/user-attachments/assets/6642110a-f731-485d-925b-ed9a7a44005a)
+![Screenshot (178)](https://github.com/user-attachments/assets/c7f32cc1-fb01-41f2-85de-b5b06dffab3c)
+![Screenshot (179)](https://github.com/user-attachments/assets/91081ab1-1195-4383-b6ac-fe36e8f4b9d0)
+
+Installing Apache
+          
+       sudo yum install -y httpd httpd-tools mod_ssl
+       sudo systemctl enable httpd 
+       sudo systemctl start httpd
+
+![Screenshot (180)](https://github.com/user-attachments/assets/206adac3-81c3-402d-abdf-63d125f1eb57)
+![Screenshot (181)](https://github.com/user-attachments/assets/c17b9c16-61be-4407-b10e-d86a3006fbfe)
+![Screenshot (183)](https://github.com/user-attachments/assets/544b5d00-dc26-4807-a5ea-842511260081)
+
+Installing WordPress
+
+      wget https://wordpress.org/latest.tar.gz
+      tar -xzf latest.tar.gz
+      sudo cp -r wordpress/* /var/www/html/
+
+![Screenshot (184)](https://github.com/user-attachments/assets/45749ceb-db65-4b43-851c-ef2cda57774c)
+![Screenshot (185)](https://github.com/user-attachments/assets/34c6ad9f-dbbc-40c1-9835-7bf3043c2441)
+
+Installing php
+
+    sudo amazon-linux-extras enable php7.4
+    sudo yum clean metadata
+    sudo yum install php php-common php-pear -y
+    sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip} -y
+
+![Screenshot (188)](https://github.com/user-attachments/assets/62d8f317-01ca-47c7-99bc-3c82db22b6b2)
+![Screenshot (189)](https://github.com/user-attachments/assets/97bbd9eb-db5c-47f0-8bab-4e0db271fd30)
+![Screenshot (190)](https://github.com/user-attachments/assets/12bef055-72ba-4d58-8708-467f54f3b66c)
+![Screenshot (191)](https://github.com/user-attachments/assets/c6e609d4-0f70-4a98-848e-4a32db33546b)
+
+After installing all the necessary tools and enabling them, i use the following commannd lines to set permissions that will allows the tools to run
+
+    sudo usermod -a -G apache ec2-user
+    sudo chown -R ec2-user:apache /var/www
+    sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;
+    sudo find /var/www -type f -exec sudo chmod 0664 {} \;
+    sudo chown apache:apache -R /var/www/html 
+
+![Screenshot (193)](https://github.com/user-attachments/assets/8f671ae4-f600-403b-9a82-81afbfab431a)
+
+After setting all the permissions, i configure WordPress into the RDS using php
+
+![Screenshot (187)](https://github.com/user-attachments/assets/f8799a06-bc88-440c-8c4c-ee89754e6a30)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
