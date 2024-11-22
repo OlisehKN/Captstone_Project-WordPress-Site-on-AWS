@@ -259,6 +259,96 @@ Before we create an ALB, we would need to first create target groups for the loa
 
 ![Screenshot (203)](https://github.com/user-attachments/assets/d94b5909-8394-4a3c-8b7f-50fc4d659650)
 
+I choose the isntance target type, chose the name "DigitalBoost-TG1" and link the DigitalBoost VPC
+
+![Screenshot (204)](https://github.com/user-attachments/assets/31529111-d0f5-4420-9c70-cca576740e56)
+![Screenshot (205)](https://github.com/user-attachments/assets/54cc09e7-69f4-4e2b-a4e3-347a025ac7dd)
+![Screenshot (206)](https://github.com/user-attachments/assets/d4a4a196-414d-4f75-ae05-c1ee7e10e63d)
+
+After that, on the "register targets" page, i clicked "include as pending below" to review the target group before clicking create
+
+![Screenshot (207)](https://github.com/user-attachments/assets/50a43336-f6af-4b1e-870e-b3a8d222068c)
+![Screenshot (208)](https://github.com/user-attachments/assets/867c0645-0448-48dd-9b3b-38d2ee75c4b0)
+![Screenshot (209)](https://github.com/user-attachments/assets/536e4a45-fa6e-4156-81c9-f8f267a09cc2)
+
+Now that i have created the target group, I navigate into the load balancers page, click the "create load balancer" button and click the ALB option on the left side of the next page
+
+![Screenshot (210)](https://github.com/user-attachments/assets/43fbdc21-143d-41a1-b388-988233239778)
+![Screenshot (211)](https://github.com/user-attachments/assets/0ff0e229-7d8c-4ec5-8c05-d3334678ce2a)
+
+I create a name for the load balancer and connect the VPC
+
+![Screenshot (212)](https://github.com/user-attachments/assets/cb140fb2-54a2-4b69-86f4-e679fb539569)
+![Screenshot (213)](https://github.com/user-attachments/assets/5601b5b0-17e9-47d2-8e43-9d54d08cc8f4)
+
+- Configure listener rules for routing traffic to instances
+
+I link the DigitalBosst security and configure the listener rules in the listners and routing section
+
+![Screenshot (215)](https://github.com/user-attachments/assets/f1dd6e5e-de52-49b7-8f18-f7d72716533d)
+
+Then i choose two different mapping zones in the mapping section and create the load balancer
+
+![Screenshot (218)](https://github.com/user-attachments/assets/f4691317-6e32-493b-9b31-0654ac3f411f)
+![Screenshot (219)](https://github.com/user-attachments/assets/bac55ada-ba5f-4065-b0c2-fc748083ba90)
+
+- Create an Auto Scaling Group
+
+I navigate into the auto scaling group page by searching in the EC@ subsection and clicking the auto scaling page
+
+![Screenshot (220)](https://github.com/user-attachments/assets/24edc41a-7e6b-4805-9759-5bbb962c9c8e)
+
+Before creating an ASG, i created a launch template,
+I first create a name for the launch template and then choose the free tier instance type
+
+![Screenshot (221)](https://github.com/user-attachments/assets/fe9a7f04-c645-4785-8ae6-51d49dc0e138)
+![Screenshot (224)](https://github.com/user-attachments/assets/fa9972e9-f748-484d-aca1-14bfcfc49dda)
+
+Next, i choose the Amazon Linux AMI
+
+![Screenshot (229)](https://github.com/user-attachments/assets/f65fdfb2-c11d-4c53-a5eb-352f8e1da54b)
+
+Next, i create a new key pair for the launch template
+
+![Screenshot (225)](https://github.com/user-attachments/assets/7d161c05-f090-4581-a4d0-acdba33310c5)
+
+I connect the first public subnet and the security group to the launch template
+
+![Screenshot (227)](https://github.com/user-attachments/assets/69d0cde9-b2a3-404d-901c-22d4347a402b)
+
+Lastly, i add a shell script to display a message on the website to visitors and then create the launch template
+
+![Screenshot (235)](https://github.com/user-attachments/assets/632c4c65-6a9c-473c-8416-808f0cdcb99d)
+![Screenshot (236)](https://github.com/user-attachments/assets/05c8bbd8-e670-46f0-ad4d-b319281ba134)
+
+After the creation of the launch template, i return back to the auto scaling group page and then create a name for the ASG and then connect the newly created launch template
+
+![Screenshot (237)](https://github.com/user-attachments/assets/0588ac5c-2386-4e66-8e79-1a7fcf922bcd)
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
