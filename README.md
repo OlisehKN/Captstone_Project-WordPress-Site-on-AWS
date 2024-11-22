@@ -325,6 +325,46 @@ After the creation of the launch template, i return back to the auto scaling gro
 
 ![Screenshot (237)](https://github.com/user-attachments/assets/0588ac5c-2386-4e66-8e79-1a7fcf922bcd)
 
+- Define scaling policies based on metrics like CPU utilization
+
+Next i set the range of vCPU's and memory allocated, then i connect eh VPC and select all the available zones and subnets
+
+![Screenshot (238)](https://github.com/user-attachments/assets/c8ac58ea-6551-4740-9f82-95963393c976)
+![Screenshot (239)](https://github.com/user-attachments/assets/b24b619d-0b9f-4ab1-a9ff-4b67d5a2db5b)
+
+- Intergrate Load Balancer with auto scaling group and configure launch configurations for instances
+
+![Screenshot (240)](https://github.com/user-attachments/assets/9e25656a-a6b8-4df1-aa94-b273de8e0b21)
+![Screenshot (241)](https://github.com/user-attachments/assets/56430768-3a81-42a4-a249-4dce4ab803ad)
+![Screenshot (242)](https://github.com/user-attachments/assets/c04fed7e-fc3f-4cb6-8afa-cd04e6aaa7f1)
+
+Lastly i review all the selected configurations for the AGS and create the scaling group. Also ensuring that the instance created by the AGS is in healthy condition
+
+![Screenshot (243)](https://github.com/user-attachments/assets/c8448497-8489-401e-8606-b7c82e20c674)
+![Screenshot (244)](https://github.com/user-attachments/assets/4cd186a1-18ed-43f3-baef-2ecc60510258)
+![Screenshot (245)](https://github.com/user-attachments/assets/e27050d0-878b-4fbe-99e2-fa3ebace930b)
+![Screenshot (246)](https://github.com/user-attachments/assets/e8806a16-4650-47e8-83ba-0a371b38cd62)
+![Screenshot (247)](https://github.com/user-attachments/assets/9e8cc629-50f3-4ec4-bd38-2f438fd41aaf)
+![Screenshot (248)](https://github.com/user-attachments/assets/382530ca-fc97-4440-a796-536606f49dd7)
+![Screenshot (249)](https://github.com/user-attachments/assets/f5dd1a3b-0282-464d-8c20-3a1039551893)
+
+End Result
+
+![Screenshot (250)](https://github.com/user-attachments/assets/d0987561-ef51-4496-b401-a936b0ac2d06)
+![Screenshot (251)](https://github.com/user-attachments/assets/4020d8fa-ae24-48aa-a485-f3f469ce6393)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
