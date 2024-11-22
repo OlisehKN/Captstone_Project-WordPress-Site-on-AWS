@@ -219,6 +219,54 @@ After setting all the permissions, i configure WordPress into the RDS using php
 
 ![Screenshot (187)](https://github.com/user-attachments/assets/f8799a06-bc88-440c-8c4c-ee89754e6a30)
 
+### <ins>4.) EFS Setup for WordPress Files</ins>
+  <ins>Objective: Utilize Amazon Elastic File System (EFS) to store WordPress files for scalable and shared access.</ins>
+- Create an EFS file system
+
+I navigated my way to the EFS page on AWS, and clicked create create file system and proceeded to give a name the file system "DigitalBoost=EFS1" and linked the DigitalBoost VPC to the file system and created the file system.
+
+![Screenshot (194)](https://github.com/user-attachments/assets/1f1e0d51-5e1e-49ca-98fe-559b8666e9c0)
+![Screenshot (195)](https://github.com/user-attachments/assets/eae0d0b6-a774-42bf-bed5-d7ba9fd559f0)
+![Screenshot (196)](https://github.com/user-attachments/assets/80494c9b-ea14-4f1a-8e42-a295298ad128)
+
+Secondly, i mounted targets onto the file system and also added the DigitalBoost security groups to the target zones
+
+![Screenshot (197)](https://github.com/user-attachments/assets/d4843da5-e10b-45ab-b2c2-543c2e9c8c17)
+![Screenshot (198)](https://github.com/user-attachments/assets/355a5f57-42e6-4dd3-99fa-31f38b43ffca)
+
+- Mount the EFS file system to the WordPress Instance
+
+Firstly, before i mount the efs file system, i install the amazon efs tool on the instance with the "sudo yum install -y amazon-efs-utils" command line
+
+![Screenshot (199)](https://github.com/user-attachments/assets/e4055c30-2115-4b51-a0e6-3624ab21781a)
+
+After that, i make a /var/www/html directory on the instance to mount the efs file system
+
+![Screenshot (200)](https://github.com/user-attachments/assets/6bae5dc0-b4c2-4c5e-a83a-2edaab71c8e8)
+
+After creating the directory, i mount the efs file system by copying the mount link on the efs amazon page
+
+![Screenshot (201)](https://github.com/user-attachments/assets/e32f5be3-36b9-4267-a3cd-cf112e1586ee)
+
+Error: While attempting to mount it, i got an error message saying that the mount point does not exist
+Solution: I changed the destination point for the mount from efs to the /var/www/html directory i created earlier
+
+### <ins>5.) Application Load Balancer & Auto Scaling Group</ins>
+  <ins>Objective: Set up an Application Load Balancer to distribute incoming traffic among multiple instances, ensuring high availability and fault tolerance and Implement Auto Scaling to automatically adjust the number of instances based on traffic load.</ins>
+- Create an application load balancer
+
+Before we create an ALB, we would need to first create target groups for the load balancer. I navigated my way to the target group page through the load balancing section in AWS and click "create target group"
+
+![Screenshot (203)](https://github.com/user-attachments/assets/d94b5909-8394-4a3c-8b7f-50fc4d659650)
+
+
+
+
+
+
+
+
+
 
 
 
