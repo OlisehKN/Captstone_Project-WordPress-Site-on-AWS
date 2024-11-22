@@ -125,6 +125,49 @@ Set the beginning IP range to 0.0.0.0/0
 
 ### <ins>3.) AWS MySQL RDS Setup</ins>
   <ins>Objective: Deploy a managed MySQL database using Amazon RDS for WordPress data storage.</ins>
+- Create an Amazon RDS instance with MySQL engine
+
+Firstly, i search Amazon RDS on the AWS website and navigate to the create databse page
+
+![Screenshot (162)](https://github.com/user-attachments/assets/dc779afc-3b0a-4bc5-8b60-82b9c700d82c)
+
+On the Create page, i choose Standard Create and choose the MySQL Engine
+
+![Screenshot (163)](https://github.com/user-attachments/assets/0c0ab301-cfd5-40e9-8bef-80b8323e8226)
+![Screenshot (164)](https://github.com/user-attachments/assets/9622e35e-851c-4faa-b786-3899153ad38d)
+
+With the latest version and a Free tier template
+
+![Screenshot (165)](https://github.com/user-attachments/assets/4c105a74-b626-4356-bbba-c8b1a7458ebc)
+![Screenshot (166)](https://github.com/user-attachments/assets/c3abd918-185f-49d6-be48-3a48d5686211)
+
+I choose a name for the Database, username, create a password and choose an instance configuration
+
+![Screenshot (167)](https://github.com/user-attachments/assets/9492c33a-c546-4f9a-a3ba-25755dc201ba)
+![Screenshot (168)](https://github.com/user-attachments/assets/d5103c43-0f01-45c4-8956-710c377662f9)
+![Screenshot (169)](https://github.com/user-attachments/assets/7b886f2f-d147-4263-8704-1b0a7e90c9e0)
+
+- Configure security groups for RDS Instance
+I link the DigitalBoost VPC and Security group and create the Database
+
+![Screenshot (170)](https://github.com/user-attachments/assets/fdc604f4-71d0-4f04-805c-0cac98215f06)
+![Screenshot (171)](https://github.com/user-attachments/assets/7813baf7-a855-4df1-a16a-4b9fba5e20fd)
+![Screenshot (172)](https://github.com/user-attachments/assets/1dc03b2f-e310-430d-b7fa-c8efd17c6bab)
+![Screenshot (174)](https://github.com/user-attachments/assets/04cf7299-a583-4696-80fa-e52b914504f4)
+
+- Connect WordPress to the RDS
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
